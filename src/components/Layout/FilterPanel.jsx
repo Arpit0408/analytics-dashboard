@@ -21,7 +21,7 @@ export default function FilterPanel({ onClose }) {
       {/* Header */}
       <div className="flex items-center justify-between border-b pb-3">
         <div className="flex items-center gap-2 text-gray-800 font-semibold text-base">
-          <MdFilterAlt className="text-lg text-blue-600" />
+          <MdFilterAlt className="text-lg text-orange-600" />
           Filters
         </div>
         {onClose && (
@@ -37,7 +37,7 @@ export default function FilterPanel({ onClose }) {
         <select
           value={filters.status}
           onChange={handleStatusChange}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
         >
           <option value="All">All</option>
           <option value="Running">Running</option>
@@ -54,7 +54,7 @@ export default function FilterPanel({ onClose }) {
           value={filters.keyword}
           onChange={handleKeywordChange}
           placeholder="e.g. Summer campaign"
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
       </div>
 
@@ -69,7 +69,7 @@ export default function FilterPanel({ onClose }) {
         {onClose && (
           <button
             onClick={onClose}
-            className="bg-blue-600 text-white px-4 py-1.5 text-sm rounded-lg hover:bg-blue-700 transition"
+            className="bg-orange-600 text-white px-4 py-1.5 text-sm rounded-lg hover:bg-orange-700 transition"
           >
             Apply
           </button>

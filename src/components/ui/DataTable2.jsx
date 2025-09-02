@@ -96,15 +96,17 @@ export default function BiggestChangesTable() {
   const [activeTab, setActiveTab] = useState("Campaigns");
 
   return (
-        <Card className="h-84 flex items-center justify-center text-sm text-gray-500">
+<Card className="h-[21rem] flex items-center border border-gray-400 justify-center text-sm text-gray-500">
+
+
 
       {/* Tabs */}
-      <div className="flex space-x-4 border-b mb-4">
+<div className="flex space-x-3 border-b border-gray-400">
         {tabs.map(tab => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`py-2 px-4 text-sm -mb-[1px] border-b-2 transition-all ${
+            className={`py-2 px-2 -mb-[1px] border-b-2 font-medium transition-all ${
               activeTab === tab
                 ? "border-orange-500 text-orange-600"
                 : "border-transparent text-gray-600 hover:text-orange-600"
@@ -128,7 +130,7 @@ export default function BiggestChangesTable() {
           {tabData[activeTab].map((item, idx) => (
             <div
               key={idx}
-              className="grid grid-cols-[1fr_1fr_1fr] py-3 items-center"
+              className="grid border-0 grid-cols-[1fr_1fr_1fr] py-3 items-center"
             >
               {/* Left Column */}
               <div>

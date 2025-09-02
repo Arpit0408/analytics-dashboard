@@ -85,12 +85,12 @@ export default function TabbedDataTable() {
   return (
         <Card className="h-84 flex items-center justify-center text-sm text-gray-500">
       <div className="mb-4">
-        <div className="flex space-x-4 border-b">
+<div className="flex space-x-3 border-b border-gray-400">
           {tabs.map(tab => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`py-2 px-4 -mb-[1px] border-b-2 font-medium transition-all ${
+              className={`py-2 px-2 -mb-[1px] border-b-2 font-medium transition-all ${
                 activeTab === tab
                   ? "border-orange-500 text-orange-600"
                   : "border-transparent text-gray-600 hover:text-orange-600"
@@ -119,7 +119,7 @@ export default function TabbedDataTable() {
         </thead>
         <tbody>
           {table.getRowModel().rows.map(row => (
-            <tr key={row.id} className="border-t">
+            <tr key={row.id} className="border-transparent">
               {row.getVisibleCells().map(cell => (
                 <td key={cell.id} className="py-2">
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}

@@ -11,10 +11,10 @@ export default function Overview() {
 
   return (
     <div className="space-y-6">
-      {/* KPIs row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-        {kpis.map((k, i) => <Kpi key={i} {...k} />)}
-      </div>
+   <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
+  {kpis.map((k, i) => <Kpi key={i} {...k} />)}
+</div>
+
 
       {/* middle charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
